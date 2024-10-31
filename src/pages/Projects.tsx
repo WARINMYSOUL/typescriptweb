@@ -18,14 +18,24 @@ export const Projects = () => {
     ];
 
     return (
-        <div className="projects">
-            <h2>Проекты</h2>
-            <ul>
+        <div className="container font-sans text-gray-800 ">
+            <h2 className="text-4xl text-black mb-5 text-center">Проекты</h2>
+            <ul className="list-none p-0 max-w-3xl mx-auto">
                 {projects.map((project, index) => (
-                    <li key={index} className="project-item">
-                        <h3>{project.title}</h3>
-                        <p>{project.description}</p>
-                        <a href={project.link} target="_blank" rel="noopener noreferrer">Посмотреть проект</a>
+                    <li
+                        key={index}
+                        className="bg-white p-5 mb-4 rounded-lg shadow-md transition-transform transform hover:-translate-y-1"
+                    >
+                        <h3 className="text-2xl mb-2">{project.title}</h3>
+                        <p className="text-lg leading-relaxed mb-2">{project.description}</p>
+                        <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-400 font-bold hover:underline"
+                        >
+                            Посмотреть проект
+                        </a>
                     </li>
                 ))}
             </ul>
